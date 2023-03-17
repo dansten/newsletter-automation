@@ -11,8 +11,11 @@ from stqdm import stqdm
 import streamlit as st
 from itertools import filterfalse
 import math
+import os
+from dotenv import load_dotenv
+load_dotenv()
 
-api_key = "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"
+api_key = os.getenv('API_KEY')
 
 technologies_dict = {'Automation': ['Automation'],
                      'AI': ['AI',  'Artifical Intelligence', 'Machine learning','ML', 'Generative AI', 'Computer vision', 'Natural language', 'NLP', 'NLU', 'Robotics', 'Edge AI', 'Edge', 'Synthetic', 'Synthetic Data', 'Physics-infomred AI', 'Physics Artifical', 'Deep Learning', 'labelling', 'annotation'],
@@ -251,7 +254,7 @@ def main():
 
     # File upload through Streamlit
     uploaded_file = st.file_uploader("Upload CSV file", type=["csv"])
-
+    print(api_key)
     if uploaded_file is not None:
         file_name = uploaded_file.name[:-4] # Remove .csv extension
         data = pd.read_csv(uploaded_file)
