@@ -276,7 +276,10 @@ def main():
             new_parser = HtmlToDocx()
             new_parser.paragraph_style = 'No Spacing'
             new_parser.parse_html_file(f'{file_name}.html', f'{file_name}')
-
+            
+            if os.path.exists(f'{file_name}.html'):
+                os.remove(f'{file_name}.html')
+            
             with open(f'{file_name}.docx', 'rb') as doc:
                 doc_bytes = doc.read()
                 st.download_button(label='Download Word Document', data=doc_bytes, file_name=f'{file_name}.docx', mime='application/vnd.openxmlformats-officedocument.wordprocessingml.document')
