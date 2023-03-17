@@ -254,7 +254,7 @@ def main():
 
     # File upload through Streamlit
     uploaded_file = st.file_uploader("Upload CSV file", type=["csv"])
-    print(api_key)
+
     if uploaded_file is not None:
         file_name = uploaded_file.name[:-4] # Remove .csv extension
         data = pd.read_csv(uploaded_file)
