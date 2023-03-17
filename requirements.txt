@@ -5,4 +5,4 @@ bs4
 openai
 stqdm
 streamlit
-dotenv
+python-dotenv
