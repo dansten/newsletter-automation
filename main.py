@@ -241,6 +241,7 @@ def format_company(row, scrape=filterfalse):
     )
 
 def main():
+    st.set_page_config(page_title='DN - SaaS Automation')
     st.markdown("# SaaS Newsletter Automation")
     st.markdown("Instructions:")
     st.markdown("- Go to Pitchbook and download the data for the relevant companies.")
