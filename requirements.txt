@@ -1,0 +1,13 @@
+htmldocx
+pandas
+re
+datetime
+requests
+bs4
+openai
+stqdm
+streamlit
+itertools
+math
+os
+dotenv
